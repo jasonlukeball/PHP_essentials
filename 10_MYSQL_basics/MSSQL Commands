@@ -1,0 +1,56 @@
+// LOGIN
+mysql -u username -p
+
+
+// SHOW LIST OF ALL DATABASES
+SHOW DATABASES;
+
+
+// CREATE DATABASE
+CREATE DATABASE databaseName;
+
+
+// USE A DATABASE
+USE databaseName;
+
+
+// DELETE DATABASE
+DROP DATABASE databaseName;
+
+
+// CREATE USER AND GRANT THIS USER WITH ALL PRIVILEGES ON A DATABASE
+GRANT ALL PRIVILEGES ON databaseName.*
+TO 'username'@'localhost'
+IDENTIFIED BY 'password';
+
+
+// SHOW ALL TABLES
+SHOW TABLES;
+
+
+// CREATE TABLE tableName (
+column_name1 definition,
+column_name2 definition,
+column_name3 definition,
+options
+);
+
+CREATE TABLE subjects (
+id INT(11) NOT NULL AUTO_INCREMENT,
+menu_name VARCHAR(30) NOT NULL,
+position INT(3) NOT NULL,
+visible TINYINT(1) NOT NULL,
+PRIMARY KEY (id)
+);
+
+
+
+// LIST ALL FIELDS/COLUMNS
+SHOW COLUMNS FROM tableName;
+
+
+// DELETE TABLE
+DROP TABLE tableName;
+
+
+

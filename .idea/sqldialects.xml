@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/11_PHP Access MySQL/1. Create.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/11_PHP Access MySQL/2. Read.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/11_PHP Access MySQL/3. Update.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/11_PHP Access MySQL/4. Delete.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/11_PHP Access MySQL/ConnectToMySQL.php" dialect="MySQL" />
+  </component>
+</project>
