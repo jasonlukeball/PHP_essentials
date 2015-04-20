@@ -1,12 +1,6 @@
 <?php
 
 
-
-
-
-
-
-
 // INCLUDE DATABASE CONNECTION PHP
 require_once "../includes/db_connection.php";
 // INCLUDE FUNCTIONS PHP
@@ -25,12 +19,6 @@ if (!empty($_POST["submit"])) {
     $position = $_POST["position"];
     $visible = $_POST["visible"];
     $content = mysqli_real_escape_string($connection, $_POST["content"]);
-
-
-
-
-
-
 
     // BEGIN DATABASE QUERY
     // DEFINE QUERY
@@ -65,4 +53,4 @@ if (!empty($_POST["submit"])) {
 
 
 // CLOSE DATABASE CONNECTION
-//mysqli_close($connection);
+mysqli_close($connection);
