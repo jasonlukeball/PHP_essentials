@@ -21,10 +21,6 @@ if (isset($_GET["page"])) {
 }
 
 
-
-
-
-
 // <!--------------------->
 // <!-- FORM PROCESSING -->
 // <!--------------------->
@@ -33,10 +29,10 @@ if (isset($_GET["page"])) {
 
 if (!empty($_POST["submit"])) {
 
-// FORM WAS SUBMITTED
-// PROCESS THE FORM
+    // FORM WAS SUBMITTED
+    // PROCESS THE FORM
 
-// GET VALUES FROM THE $_POST
+    // GET VALUES FROM THE $_POST
     $id         = $selected_page_id;
     $menu_name  = mysqli_real_escape_string($connection, $_POST["menu_name"]);
     $position   = $_POST["position"];
@@ -46,18 +42,14 @@ if (!empty($_POST["submit"])) {
     $content  = mysqli_real_escape_string($connection, $_POST["content"]);
 
 
-
-
-
-
-// BEGIN UPDATE
-// DEFINE QUERY
+    // BEGIN UPDATE
+    // DEFINE QUERY
     $query = "UPDATE pages SET menu_name = '{$menu_name}', position = {$position}, visible = {$visible}, content = '{$content}' WHERE id = {$id}";
 
-// PASS THE QUERY TO MYSQL AND GET THE RESULT BACK
+    // PASS THE QUERY TO MYSQL AND GET THE RESULT BACK
     $result = mysqli_query($connection, $query);
 
-// TEST IF THERE WAS A QUERY ERROR
+    // TEST IF THERE WAS A QUERY ERROR
     if ($result) {
         // QUERY SUCCEEDED
         // GO BACK TO MANAGE CONTENT PAGE
@@ -76,22 +68,12 @@ if (!empty($_POST["submit"])) {
 // NO POST VALUES, JUST CONTINUE & LOAD THE PAGE
 }
 
-
 // INCLUDE HEADER HTML
 include "../includes/layouts/header.php";
-
-
 ?>
 
 
-
-
-
-
 <div id="main">
-
-
-
     <!---------------->
     <!-- NAVIGATION -->
     <!---------------->
@@ -143,35 +125,12 @@ include "../includes/layouts/header.php";
     <!------------------>
     <div id="page">
 
-
-
-
-
         <h3>Edit Page: <?php echo $current_page["menu_name"] ?></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!-- START EDIT PAGE FORM -->
         <form action="edit_page.php?page=<?php echo $current_page["id"] ?>" method="post">
             <!-- SUBJECT NAME TEXT FIELD -->
             <p>Subject Name: <input type="text" name="menu_name" value="<?php echo $current_page["menu_name"] ?>" /></p>
-
-
-
-
 
             <!-- POSITION DROPDOWN MENU -->
             <p>Position:
@@ -214,18 +173,11 @@ include "../includes/layouts/header.php";
                 }
                 ?>
             </p>
-
-
             <p>
                 Content:
                 </br>
                 <textarea name="content" rows="20" cols="80"><?php echo $current_page["content"] ?></textarea>
             </p>
-
-
-
-
-
             <!-- SUBMIT BUTTON -->
             <input class="button" name="submit" type="submit" value="Save Changes" />
         </form>
@@ -240,12 +192,6 @@ include "../includes/layouts/header.php";
             onclick="return confirm('Are tou sure?');"
             >Delete</a>
     </div>
-
-
-
-
-
-
 </div>
 
 
