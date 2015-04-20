@@ -30,6 +30,7 @@ if (isset($_GET["subject"])) {
 } else {
     $selected_subject_id = null;
     $selected_page_id = null;
+
 }
 
 ?>
