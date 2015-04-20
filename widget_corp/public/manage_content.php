@@ -96,6 +96,48 @@ if (isset($_GET["subject"])) {
             echo "<hr>";
 
 
+
+
+            // GET RELATED PAGES FOR EACH SUBJECT
+            // SQL QUERY IS DEFINED IN THE get_pages_for_subject function
+            $pagesresult = get_related_pages_for_subject($current_subject["id"]);
+
+            // OUTPUT RELATED PAGES INTO UNORDERED LIST
+
+            $pagesReturned = mysqli_num_rows($pagesresult);
+
+            echo "<h4 id=\"h4PageCount\">";
+            echo "{$pagesReturned} Related Pages for this Subject." ;
+            echo "</h4>";
+            echo "</br>";
+
+
+            while($page = mysqli_fetch_assoc($pagesresult)) {
+                echo "<ul class=\"pages\">";
+                echo "<a href=\"manage_content.php?page={$page["id"]}\"" ;
+                echo "<li>" . $page["menu_name"] . "</li>";
+                echo "</a>";
+                echo "</ul>";
+
+
+            }
+
+
+
+
+            echo "</br></br>";
+            echo "<a href=\"edit_subject.php?subject={$current_subject["id"]}\">+ Add a Related Page</a>";
+            echo "<hr>";
+
+
+
+
+
+
+
+
+
+
         } elseif ($currentpage) {
             // PAGE SELECTED
             // OUTPUT MENU NAME FOR THIS PAGE
