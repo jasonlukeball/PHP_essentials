@@ -4,15 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/04_loops/for.php" line="2" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dac137e8-fe02-4edb-a1de-66a043d9e9f1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/edit_page.php" afterPath="$PROJECT_DIR$/widget_corp/public/edit_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/edit_subject.php" afterPath="$PROJECT_DIR$/widget_corp/public/edit_subject.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/includes/layouts/header.php" afterPath="$PROJECT_DIR$/widget_corp/includes/layouts/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/index.php" afterPath="$PROJECT_DIR$/widget_corp/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/manage_content.php" afterPath="$PROJECT_DIR$/widget_corp/public/manage_content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/new_page.php" afterPath="$PROJECT_DIR$/widget_corp/public/new_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/new_subject.php" afterPath="$PROJECT_DIR$/widget_corp/public/new_subject.php" />
-    </list>
+    <list default="true" id="dac137e8-fe02-4edb-a1de-66a043d9e9f1" name="Default" comment="" />
     <ignored path="lynda_essentialTraining.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -84,13 +76,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widget_corp/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21598002" vertical-offset="37" max-vertical-offset="1695">
+            <state vertical-scroll-proportion="-7.2083335" vertical-offset="37" max-vertical-offset="1695">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/widget_corp/includes/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14981273" vertical-offset="0" max-vertical-offset="801">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <folding>
+                <element signature="n#redirect_to#0;n#!!top" expanded="false" />
+                <element signature="n#confirm_query#0;n#!!top" expanded="false" />
+                <element signature="e#197#252#0#PHP" expanded="false" />
+                <element signature="n#get_all_subjects#0;n#!!top" expanded="false" />
+                <element signature="n#get_related_pages_for_subject#0;n#!!top" expanded="false" />
+                <element signature="n#get_subject_by_id#0;n#!!top" expanded="false" />
+                <element signature="n#get_page_by_id#0;n#!!top" expanded="false" />
+                <element signature="n#get_all_pages_by_subject_id#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -774,28 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/includes/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="540">
-          <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="49" />
-          <folding>
-            <element signature="n#redirect_to#0;n#!!top" expanded="false" />
-            <element signature="n#confirm_query#0;n#!!top" expanded="false" />
-            <element signature="e#197#252#0#PHP" expanded="false" />
-            <element signature="n#get_all_subjects#0;n#!!top" expanded="false" />
-            <element signature="n#get_related_pages_for_subject#0;n#!!top" expanded="false" />
-            <element signature="n#get_subject_by_id#0;n#!!top" expanded="false" />
-            <element signature="n#get_page_by_id#0;n#!!top" expanded="false" />
-            <element signature="n#get_all_pages_by_subject_id#0;n#!!top" expanded="false" />
-            <marker date="1429512410000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..subjects..." />
-            <marker date="1429512410000" expanded="true" signature="-1:-1" placeholder="SELECT id, m..pages..." />
-            <marker date="1429512410000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..subjects..." />
-            <marker date="1429512410000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..pages..." />
-            <marker date="1429512410000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..pages..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/create_subject.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="855">
@@ -885,10 +874,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21598002" vertical-offset="37" max-vertical-offset="1695">
+        <state vertical-scroll-proportion="-7.2083335" vertical-offset="37" max-vertical-offset="1695">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14981273" vertical-offset="0" max-vertical-offset="801">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="n#redirect_to#0;n#!!top" expanded="false" />
+            <element signature="n#confirm_query#0;n#!!top" expanded="false" />
+            <element signature="e#197#252#0#PHP" expanded="false" />
+            <element signature="n#get_all_subjects#0;n#!!top" expanded="false" />
+            <element signature="n#get_related_pages_for_subject#0;n#!!top" expanded="false" />
+            <element signature="n#get_subject_by_id#0;n#!!top" expanded="false" />
+            <element signature="n#get_page_by_id#0;n#!!top" expanded="false" />
+            <element signature="n#get_all_pages_by_subject_id#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
