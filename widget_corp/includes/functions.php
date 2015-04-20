@@ -17,11 +17,22 @@ function confirm_query($result_set) {
 
 
 // SQL QUERY TO GET ALL SUBJECTS
-function get_all_subjects() {
+function get_all_subjects($access) {
     // GET THE CONNECTION VARIABLE AND MAKE IT GLOBAL
     global $connection;
-    // GET ALL SUBJECTS ORDERED BY POSITION
-    $subjectsquery = "SELECT * FROM subjects ORDER BY position ASC";
+
+    if ($access == "admin") {
+        // GET ALL SUBJECTS ORDERED BY POSITION
+        $subjectsquery = "SELECT * FROM subjects ORDER BY position ASC";
+    } elseif ($access == "public" )  {
+        // GET ALL (VISIBLE) SUBJECTS ORDERED BY POSITION
+        $subjectsquery = "SELECT * FROM subjects WHERE visible = 1 ORDER BY position ASC";
+
+    }
+
+
+
+
     // STORE RESULT
     $subjectsresult = mysqli_query($connection, $subjectsquery);
     // CHECK FOR ERRORS
@@ -32,11 +43,24 @@ function get_all_subjects() {
 
 
 // SQL QUERY TO GET PAGES RELATED TO SUBJECT
-function get_related_pages_for_subject ($subject_id) {
+function get_related_pages_for_subject ($subject_id, $access) {
     // GET THE CONNECTION VARIABLE AND MAKE IT GLOBAL
     global $connection;
-    // GET RELATED PAGES FOR EACH SUBJECT
-    $pagesquery = "SELECT id, menu_name FROM pages WHERE visible = 1 AND subject_id = {$subject_id} ORDER BY position ASC";
+
+    if ( $access == "admin") {
+        // GET ALL RELATED PAGES FOR EACH SUBJECT
+        $pagesquery = "SELECT id, menu_name FROM pages WHERE  subject_id = {$subject_id} ORDER BY position ASC";
+
+    } elseif ( $access == "public") {
+        // GET ALL (VISIBLE) RELATED PAGES FOR EACH SUBJECT
+        $pagesquery = "SELECT id, menu_name FROM pages WHERE visible = 1 AND subject_id = {$subject_id} ORDER BY position ASC";
+
+    }
+
+
+
+
+
     $pagesresult = mysqli_query($connection, $pagesquery);
     // CHECK FOR ERRORS
     confirm_query($pagesquery);

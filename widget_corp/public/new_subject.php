@@ -42,7 +42,7 @@ if (isset($_GET["subject"])) {
             <?php
             // GET ALL SUBJECTS ORDERED BY POSITION
             // SQL QUERY IS DEFINED IN THE get_all_subjects function
-            $subjectsresult = get_all_subjects();
+            $subjectsresult = get_all_subjects("admin");
             // OUTPUT SUBJECTS INTO UNORDERED LIST WITH LINKS
             while($subject = mysqli_fetch_assoc($subjectsresult)) {
                 echo "<a href=\"manage_content.php?subject={$subject["id"]}\"" ;
@@ -56,7 +56,7 @@ if (isset($_GET["subject"])) {
                 echo "</a>";
                 // GET RELATED PAGES FOR EACH SUBJECT
                 // SQL QUERY IS DEFINED IN THE get_pages_for_subject function
-                $pagesresult = get_related_pages_for_subject($subject["id"]);
+                $pagesresult = get_related_pages_for_subject($subject["id"], "admin");
                 // OUTPUT RELATED PAGES INTO UNORDERED LIST
                 while($page = mysqli_fetch_assoc($pagesresult)) {
                     echo "<ul class=\"pages\">";
@@ -90,7 +90,7 @@ if (isset($_GET["subject"])) {
                 <select name="position">
                     <?php
                     // GET ALL SUBJECTS
-                    $subject_set = get_all_subjects();
+                    $subject_set = get_all_subjects("admin");
                     // COUNT ALL SUBJECTS
                     $subject_count = mysqli_num_rows($subject_set);
                     // LOOP THROUGH ALL SUBJECTS AND OUTPUT THE VALUES AS OPTIONS FOR THE POSITION SELECTOR (DROPDOWN)

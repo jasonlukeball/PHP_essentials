@@ -50,7 +50,7 @@ if (isset($_GET["subject"])) {
         <ul class="subjects">
             <?php
             // GET ALL SUBJECTS ORDERED BY POSITION
-            $subjectsresult = get_all_subjects();
+            $subjectsresult = get_all_subjects("public");
 
             // OUTPUT SUBJECTS INTO UNORDERED LIST WITH LINKS
             while($subject = mysqli_fetch_assoc($subjectsresult)) {
@@ -69,7 +69,7 @@ if (isset($_GET["subject"])) {
                     $current_subject["id"] == $subject["id"] || $current_page["subject_id"] == $subject["id"]
 
                 ) {
-                    $pagesresult = get_related_pages_for_subject($subject["id"]);
+                    $pagesresult = get_related_pages_for_subject($subject["id"], "public");
                     // OUTPUT RELATED PAGES AS UNORDERED LIST
                     while($page = mysqli_fetch_assoc($pagesresult)) {
                         echo "<ul class=\"pages\">";

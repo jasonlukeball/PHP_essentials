@@ -33,7 +33,7 @@ include "../includes/layouts/header.php";
             <?php
             // GET ALL SUBJECTS ORDERED BY POSITION
             // SQL QUERY IS DEFINED IN THE get_all_subjects function
-            $subjectsresult = get_all_subjects();
+            $subjectsresult = get_all_subjects("admin");
             // OUTPUT SUBJECTS INTO UNORDERED LIST WITH LINKS
             while($subject = mysqli_fetch_assoc($subjectsresult)) {
                 echo "<a href=\"manage_content.php?subject={$subject["id"]}\"" ;
@@ -47,7 +47,7 @@ include "../includes/layouts/header.php";
                 echo "</a>";
                 // GET RELATED PAGES FOR EACH SUBJECT
                 // SQL QUERY IS DEFINED IN THE get_pages_for_subject function
-                $pagesresult = get_related_pages_for_subject($subject["id"]);
+                $pagesresult = get_related_pages_for_subject($subject["id"], "admin");
                 // OUTPUT RELATED PAGES INTO UNORDERED LIST
                 while($page = mysqli_fetch_assoc($pagesresult)) {
                     echo "<ul class=\"pages\">";
