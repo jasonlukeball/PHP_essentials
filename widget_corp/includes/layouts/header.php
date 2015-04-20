@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Widget Corp</title>
+    <title>Widget Corp <?php if ($layout_context == "admin") {echo "Admin";} ?></title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -21,5 +21,5 @@
 
 
 <div id="header">
-    <h1>CompanyName</h1>
+    <h1>CompanyName <?php if ($layout_context == "admin") {echo "Admin";} ?></h1>
 </div>

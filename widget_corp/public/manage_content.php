@@ -8,6 +8,9 @@
 require_once "../includes/db_connection.php";
 // INCLUDE FUNCTIONS PHP
 require_once "../includes/functions.php";
+
+// SET THE LAYOUT CONTEXT FOR THE HEADER
+$layout_context = "admin";
 // INCLUDE HEADER HTML
 include "../includes/layouts/header.php";
 

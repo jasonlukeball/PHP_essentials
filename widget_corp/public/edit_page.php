@@ -68,6 +68,8 @@ if (!empty($_POST["submit"])) {
 // NO POST VALUES, JUST CONTINUE & LOAD THE PAGE
 }
 
+// SET THE LAYOUT CONTEXT FOR THE HEADER
+$layout_context = "admin";
 // INCLUDE HEADER HTML
 include "../includes/layouts/header.php";
 ?>

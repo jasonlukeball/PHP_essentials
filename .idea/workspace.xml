@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dac137e8-fe02-4edb-a1de-66a043d9e9f1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/edit_page.php" afterPath="$PROJECT_DIR$/widget_corp/public/edit_page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/edit_subject.php" afterPath="$PROJECT_DIR$/widget_corp/public/edit_subject.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/includes/layouts/header.php" afterPath="$PROJECT_DIR$/widget_corp/includes/layouts/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/index.php" afterPath="$PROJECT_DIR$/widget_corp/public/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/manage_content.php" afterPath="$PROJECT_DIR$/widget_corp/public/manage_content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/new_page.php" afterPath="$PROJECT_DIR$/widget_corp/public/new_page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/new_subject.php" afterPath="$PROJECT_DIR$/widget_corp/public/new_subject.php" />
     </list>
     <ignored path="lynda_essentialTraining.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,8 +77,8 @@
       <file leaf-file-name="manage_content.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widget_corp/public/manage_content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-123.75" vertical-offset="0" max-vertical-offset="3060">
-              <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.2083335" vertical-offset="37" max-vertical-offset="3105">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,8 +87,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/widget_corp/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13358302" vertical-offset="568" max-vertical-offset="1770">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.21598002" vertical-offset="37" max-vertical-offset="1695">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
               </folding>
@@ -138,19 +142,19 @@
         <option value="$PROJECT_DIR$/widget_corp/apiTest.php" />
         <option value="$PROJECT_DIR$/widget_corp/includes/validationFunctions.php" />
         <option value="$PROJECT_DIR$/widget_corp/includes/db_connection.php" />
-        <option value="$PROJECT_DIR$/widget_corp/public/new_subject.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/create_subject.php" />
-        <option value="$PROJECT_DIR$/widget_corp/includes/layouts/header.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/delete_subject.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/widget_corp/public/new_page.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/create_page.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/delete_page.php" />
         <option value="$PROJECT_DIR$/widget_corp/includes/functions.php" />
-        <option value="$PROJECT_DIR$/widget_corp/public/edit_subject.php" />
-        <option value="$PROJECT_DIR$/widget_corp/public/edit_page.php" />
-        <option value="$PROJECT_DIR$/widget_corp/public/manage_content.php" />
+        <option value="$PROJECT_DIR$/widget_corp/includes/layouts/header.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/index.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/manage_content.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/edit_page.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/edit_subject.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/new_page.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/new_subject.php" />
       </list>
     </option>
   </component>
@@ -631,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31835207" vertical-offset="0" max-vertical-offset="801">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/11_PHP Access MySQL/1. Create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="1050">
@@ -712,14 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/includes/layouts/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="450">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/11_PHP Access MySQL/4. Delete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.80524343" vertical-offset="195" max-vertical-offset="1020">
@@ -765,14 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/create_subject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018726591" vertical-offset="0" max-vertical-offset="855">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="51" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/delete_page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37453184" vertical-offset="0" max-vertical-offset="1170">
@@ -790,22 +771,6 @@
           <folding>
             <marker date="1429314734000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/create_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.25" vertical-offset="0" max-vertical-offset="915">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/new_subject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7303371" vertical-offset="1035" max-vertical-offset="2010">
-          <caret line="108" column="44" selection-start-line="80" selection-start-column="8" selection-end-line="108" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,52 +796,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_page.php">
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/create_subject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7902622" vertical-offset="0" max-vertical-offset="2580">
-          <caret line="188" column="19" selection-start-line="188" selection-start-column="19" selection-end-line="188" selection-end-column="19" />
+        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="855">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="51" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/create_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-31.25" vertical-offset="0" max-vertical-offset="915">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-            <marker date="1429514591000" expanded="true" signature="-1:-1" placeholder="UPDATE pages..." />
+            <marker date="1429508062000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/new_page.php">
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6254682" vertical-offset="1359" max-vertical-offset="2445">
-          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="72" />
+        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="660">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2156863" vertical-offset="931" max-vertical-offset="3195">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
-            <marker date="1429506854000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..pages..." />
+            <marker date="1429531825000" expanded="true" signature="-1:-1" placeholder="UPDATE pages..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_subject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14357054" vertical-offset="590" max-vertical-offset="3000">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="87" selection-end-column="23" />
+        <state vertical-scroll-proportion="-2.9636364" vertical-offset="392" max-vertical-offset="3030">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding>
             <element signature="e#746#1838#0#PHP" expanded="false" />
             <element signature="e#1393#1777#0#PHP" expanded="false" />
             <element signature="e#1781#1838#0#PHP" expanded="false" />
-            <marker date="1429514591000" expanded="true" signature="-1:-1" placeholder="UPDATE subje..." />
+            <marker date="1429531825000" expanded="true" signature="-1:-1" placeholder="UPDATE subje..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/new_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.2083335" vertical-offset="187" max-vertical-offset="2475">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1429531825000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..pages..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/new_subject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16853933" vertical-offset="0" max-vertical-offset="2055">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/manage_content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-123.75" vertical-offset="0" max-vertical-offset="3060">
-          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.2083335" vertical-offset="37" max-vertical-offset="3105">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/includes/layouts/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1429531654000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429531654000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429531654000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13358302" vertical-offset="568" max-vertical-offset="1770">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.21598002" vertical-offset="37" max-vertical-offset="1695">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>

@@ -8,6 +8,9 @@
 require_once "../includes/db_connection.php";
 // INCLUDE FUNCTIONS PHP
 require_once "../includes/functions.php";
+
+// SET THE LAYOUT CONTEXT FOR THE HEADER
+$layout_context = "public";
 // INCLUDE HEADER HTML
 include "../includes/layouts/header.php";
 
@@ -24,10 +27,11 @@ if (isset($_GET["subject"])) {
     // IF WE'VE PASSED A PAGE ID, GET IT
     $selected_page_id = $_GET["page"];
     // GET DATA FOR THIS PAGE FROM THE get_page_by_id FUNCTION (SQL)
-    $currentpage = get_page_by_id ($selected_page_id);
+    $current_page = get_page_by_id ($selected_page_id);
     // SET SUBJECT ID TO NULL
     $selected_subject_id = null;
 } else {
+    // A SUBJECT OR PAGE $_GET HAS NOT BEEN PASSED
     $selected_subject_id = null;
     $selected_page_id = null;
 
@@ -59,8 +63,12 @@ if (isset($_GET["subject"])) {
                     echo "<li>" . $subject["menu_name"] . "</li>";
                 }
                 echo "</a>" . "</br>";
-                // OUTPUT RELATED PAGES FOR SELECTED SUBJECT
-                if ($current_subject["id"] == $subject["id"]) {
+                // OUTPUT RELATED PAGES FOR CURRENT SUBJECT
+                // IF SUBJECT IS SELECTED OR IF A PAGE IS SELECTED (SHOW RELATED SUBJECT'S PAGES)
+                if (
+                    $current_subject["id"] == $subject["id"] || $current_page["subject_id"] == $subject["id"]
+
+                ) {
                     $pagesresult = get_related_pages_for_subject($subject["id"]);
                     // OUTPUT RELATED PAGES AS UNORDERED LIST
                     while($page = mysqli_fetch_assoc($pagesresult)) {
@@ -94,31 +102,22 @@ if (isset($_GET["subject"])) {
     <!------------------>
     <div id="page">
         <?php
-        // OUTPUT DATA FOR THE SUBJECT OR PAGE
+        // OUTPUT DATA FOR THE SUBJECT
         if ($current_subject) {
             // SUBJECT SELECTED
-            // OUTPUT MENU NAME FOR THIS SUBJECT
+            // OUTPUT DATA FOR THIS SUBJECT
             echo "</br></br>";
             echo "<h4 id=\"h4PageCount\">" . $current_subject["menu_name"] . "</h4>";
             echo "</br>";
 
 
 
-
-
-
-
-
-
-
-
-        } elseif ($currentpage) {
+        } elseif ($current_page) {
             // PAGE SELECTED
-            // OUTPUT MENU NAME FOR THIS PAGE
+            // OUTPUT DATA FOR THIS PAGE
             echo "</br></br>";
-            echo "<h4 id=\"h4PageCount\">" . $currentpage["content"] . "</h4>";
+            echo "<h4 id=\"h4PageCount\">" . $current_page["content"] . "</h4>";
             echo "</br>";
-
 
 
 
