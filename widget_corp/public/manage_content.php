@@ -126,7 +126,7 @@ if (isset($_GET["subject"])) {
 
 
             echo "</br></br>";
-            echo "<a href=\"edit_subject.php?subject={$current_subject["id"]}\">+ Add a Related Page</a>";
+            echo "<a href=\"new_page.php?subject={$current_subject["id"]}\">+ Add a Related Page</a>";
             echo "<hr>";
 
 

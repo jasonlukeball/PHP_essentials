@@ -3,32 +3,24 @@
 require_once "../includes/db_connection.php";
 // INCLUDE FUNCTIONS PHP
 require_once "../includes/functions.php";
-// INCLUDE HEADER HTML
-include "../includes/layouts/header.php";
-?>
 
-<?php
+
 
 if (isset($_GET["subject"])) {
-    // IF WE'VE PASSED A SUBJECT ID, GET IT
-    $selected_subject_id = $_GET["subject"];
-    // GET DATA FOR THIS SUBJECT FROM THE get_subject_by_id FUNCTION
-    $current_subject = get_subject_by_id($selected_subject_id);
-    // SET PAGE ID TO NULL
-    $selected_page_id = null;
+    // IF WE'VE PASSED A RELATED SUBJECT ID, GET IT
+    $related_subject_id = $_GET["subject"];
 
-} elseif (isset($_GET["page"])) {
-    // IF WE'VE PASSED A PAGE ID, GET IT
-    $selected_page_id = $_GET["page"];
-    // GET DATA FOR THIS PAGE FROM THE get_page_by_id FUNCTION
-    $currentpage = get_page_by_id ($selected_page_id);
-    // SET SUBJECT ID TO NULL
-    $selected_subject_id = null;
+
 } else {
-    $selected_subject_id = null;
-    $selected_page_id = null;
+   redirect_to("manage_content.php");
 }
 
+?>
+
+
+<?php
+// INCLUDE HEADER HTML
+include "../includes/layouts/header.php";
 ?>
 
 
@@ -77,21 +69,42 @@ if (isset($_GET["subject"])) {
 
 
     <div id="page">
-        <h3>Create Subject</h3>
-        <!-- START CREATE NEW SUBJECT FORM -->
-        <form action="create_subject.php" method="post">
-            <!-- SUBJECT NAME TEXT FIELD -->
-            <p>Subject Name: <input type="text" name="menu_name" value="" /></p>
+        <h3>Create Page</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- START CREATE NEW PAGE FORM -->
+        <form action="create_page.php" method="post">
+
+            <!-- SUBJECT_ID (FORIGN KEY) HIDDEN FIELD -->
+            <input type="hidden" name="subject_id" value=<?php echo $related_subject_id?>>
+
+
+            <!-- PAGE NAME TEXT FIELD -->
+            <p>Page Name: <input type="text" name="menu_name" value="" /></p>
             <!-- POSITION DROPDOWN MENU -->
             <p>Position:
                 <select name="position">
                     <?php
-                    // GET ALL SUBJECTS
-                    $subject_set = get_all_subjects();
-                    // COUNT ALL SUBJECTS
-                    $subject_count = mysqli_num_rows($subject_set);
-                    // LOOP THROUGH ALL SUBJECTS AND OUTPUT THE VALUES AS OPTIONS FOR THE POSITION SELECTOR (DROPDOWN)
-                    for ($count = 1; $count <= $subject_count + 1 ; $count++) {
+                    // GET RELATED PAGES BY SUBJECT ID
+                    $pagesquery = "SELECT * FROM pages WHERE subject_id = {$related_subject_id}";
+                    // STORE RESULT
+                    $pagesresult = mysqli_query($connection, $pagesquery);
+                    // COUNT RELATED PAGES
+                    $page_count = mysqli_num_rows($pagesresult);
+
+
+                    // LOOP THROUGH ALL PAGES AND OUTPUT THE VALUES AS OPTIONS FOR THE POSITION SELECTOR (DROPDOWN)
+                    for ($count = 1; $count <= $page_count + 1 ; $count++) {
                         echo "<option value=\"{$count}\">{$count}</option>";
                     }
                     ?>
@@ -103,8 +116,24 @@ if (isset($_GET["subject"])) {
                 &nbsp;
                 <input type="radio" name="visible" value="1" /> Yes
             </p>
+
+
+
+            <p>
+                Content:
+                </br>
+                <textarea name="content" rows="20" cols="80"></textarea>
+
+            </p>
+
+
+
+
+
+
+
             <!-- SUBMIT BUTTON -->
-            <input class="button" name="submit" type="submit" value="Create Subject" />
+            <input class="button" name="submit" type="submit" value="Create Page" />
         </form>
         <!-- END CREATE NEW SUBJECT FORM -->
         </br>
@@ -115,7 +144,7 @@ if (isset($_GET["subject"])) {
 
     <?php
     // RELEASE SUBJECT DATA
-    mysqli_free_result($subjectsresult);
+    mysqli_free_result($pagesresult);
     // CLOSE DATABASE CONNECTION
     mysqli_close($connection);
     ?>
