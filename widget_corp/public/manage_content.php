@@ -1,14 +1,16 @@
+<!---------------->
+<!---- SETUP ----->
+<!---------------->
+
 <?php
+
 // INCLUDE DATABASE CONNECTION PHP
 require_once "../includes/db_connection.php";
 // INCLUDE FUNCTIONS PHP
 require_once "../includes/functions.php";
 // INCLUDE HEADER HTML
 include "../includes/layouts/header.php";
-?>
 
-
-<?php
 
 if (isset($_GET["subject"])) {
     // IF WE'VE PASSED A SUBJECT ID, GET IT
@@ -35,6 +37,10 @@ if (isset($_GET["subject"])) {
 
 <div id="main">
 
+
+    <!---------------->
+    <!-- NAVIGATION -->
+    <!---------------->
     <div id="navigation">
         <ul class="subjects">
             <?php
@@ -76,13 +82,13 @@ if (isset($_GET["subject"])) {
         </ul>
         </br>
         <a href="new_subject.php">+ Add a subject</a>
-
-
     </div>
 
 
+    <!------------------>
+    <!-- PAGE CONTENT -->
+    <!------------------>
     <div id="page">
-
         <?php
         // OUTPUT DATA FOR THE SUBJECT OR PAGE
         if ($current_subject) {
@@ -167,17 +173,25 @@ if (isset($_GET["subject"])) {
     </div>
 
 
+    <!---------------->
+    <!--- CLEAN UP --->
+    <!---------------->
 
     <?php
-    // RELEASE SUBJECT DATA
-    mysqli_free_result($subjectsresult);
-    // CLOSE DATABASE CONNECTION
-    mysqli_close($connection);
+        // RELEASE SUBJECT DATA
+     mysqli_free_result($subjectsresult);
+        // CLOSE DATABASE CONNECTION
+        mysqli_close($connection);
     ?>
 
 </div>
 
+
+<!---------------->
+<!---- FOOTER ---->
+<!---------------->
+
 <?php
-// INCLUDE FOOTER HTML
-include "../includes/layouts/footer.php";
+    // INCLUDE FOOTER HTML
+    include "../includes/layouts/footer.php";
 ?>
