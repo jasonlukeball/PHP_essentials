@@ -30,6 +30,7 @@ if (isset($_GET["subject"])) {
 } else {
     $selected_subject_id = null;
     $selected_page_id = null;
+
 }
 
 ?>
@@ -44,40 +45,40 @@ if (isset($_GET["subject"])) {
     <div id="navigation">
         <ul class="subjects">
             <?php
-                // GET ALL SUBJECTS ORDERED BY POSITION
-                // SQL QUERY IS DEFINED IN THE get_all_subjects function
-                $subjectsresult = get_all_subjects();
-                // OUTPUT SUBJECTS INTO UNORDERED LIST WITH LINKS
-                while($subject = mysqli_fetch_assoc($subjectsresult)) {
-                    echo "<a href=\"manage_content.php?subject={$subject["id"]}\"" ;
-                    if ( $subject["id"] == $selected_subject_id ) {
-                        // STYLE THE SUBJECT WITH THE "selected" CLASS IF IT IS CURRENTLY SELECTED
-                        echo "<li class=\"selected\">" . $subject["menu_name"] . "</li>";
+            // GET ALL SUBJECTS ORDERED BY POSITION
+            // SQL QUERY IS DEFINED IN THE get_all_subjects function
+            $subjectsresult = get_all_subjects();
+            // OUTPUT SUBJECTS INTO UNORDERED LIST WITH LINKS
+            while($subject = mysqli_fetch_assoc($subjectsresult)) {
+                echo "<a href=\"manage_content.php?subject={$subject["id"]}\"" ;
+                if ( $subject["id"] == $selected_subject_id ) {
+                    // STYLE THE SUBJECT WITH THE "selected" CLASS IF IT IS CURRENTLY SELECTED
+                    echo "<li class=\"selected\">" . $subject["menu_name"] . "</li>";
+                } else {
+                    // NORMAL STYLING IF NOT SELECTED
+                    echo "<li>" . $subject["menu_name"] . "</li>";
+                }
+                echo "</a>";
+                // GET RELATED PAGES FOR EACH SUBJECT
+                // SQL QUERY IS DEFINED IN THE get_pages_for_subject function
+                $pagesresult = get_related_pages_for_subject($subject["id"]);
+                // OUTPUT RELATED PAGES INTO UNORDERED LIST
+                while($page = mysqli_fetch_assoc($pagesresult)) {
+                    echo "<ul class=\"pages\">";
+                    echo "<a href=\"manage_content.php?page={$page["id"]}\"" ;
+                    if ( $page["id"] == $selected_page_id ) {
+                        // STYLE THE PAGE WITH THE "selected" CLASS IF IT IS CURRENTLY SELECTED
+                        echo "<li class=\"selected\">" . $page["menu_name"] . "</li>";
                     } else {
                         // NORMAL STYLING IF NOT SELECTED
-                        echo "<li>" . $subject["menu_name"] . "</li>";
+                        echo "<li>" . $page["menu_name"] . "</li>";
                     }
                     echo "</a>";
-                    // GET RELATED PAGES FOR EACH SUBJECT
-                    // SQL QUERY IS DEFINED IN THE get_pages_for_subject function
-                    $pagesresult = get_related_pages_for_subject($subject["id"]);
-                        // OUTPUT RELATED PAGES INTO UNORDERED LIST
-                        while($page = mysqli_fetch_assoc($pagesresult)) {
-                            echo "<ul class=\"pages\">";
-                                echo "<a href=\"manage_content.php?page={$page["id"]}\"" ;
-                                if ( $page["id"] == $selected_page_id ) {
-                                // STYLE THE PAGE WITH THE "selected" CLASS IF IT IS CURRENTLY SELECTED
-                                echo "<li class=\"selected\">" . $page["menu_name"] . "</li>";
-                            } else {
-                                // NORMAL STYLING IF NOT SELECTED
-                                echo "<li>" . $page["menu_name"] . "</li>";
-                            }
-                                echo "</a>";
-                            echo "</ul>";
-                        }
-                    // RELEASE PAGE DATA
-                    mysqli_free_result($pagesresult);
+                    echo "</ul>";
                 }
+                // RELEASE PAGE DATA
+                mysqli_free_result($pagesresult);
+            }
             ?>
         </ul>
         </br>
@@ -178,10 +179,10 @@ if (isset($_GET["subject"])) {
     <!---------------->
 
     <?php
-        // RELEASE SUBJECT DATA
-     mysqli_free_result($subjectsresult);
-        // CLOSE DATABASE CONNECTION
-        mysqli_close($connection);
+    // RELEASE SUBJECT DATA
+    mysqli_free_result($subjectsresult);
+    // CLOSE DATABASE CONNECTION
+    mysqli_close($connection);
     ?>
 
 </div>
@@ -192,6 +193,6 @@ if (isset($_GET["subject"])) {
 <!---------------->
 
 <?php
-    // INCLUDE FOOTER HTML
-    include "../includes/layouts/footer.php";
+// INCLUDE FOOTER HTML
+include "../includes/layouts/footer.php";
 ?>

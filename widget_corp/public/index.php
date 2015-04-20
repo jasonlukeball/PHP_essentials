@@ -46,11 +46,11 @@ if (isset($_GET["subject"])) {
         <ul class="subjects">
             <?php
             // GET ALL SUBJECTS ORDERED BY POSITION
-            // SQL QUERY IS DEFINED IN THE get_all_subjects function
             $subjectsresult = get_all_subjects();
+
             // OUTPUT SUBJECTS INTO UNORDERED LIST WITH LINKS
             while($subject = mysqli_fetch_assoc($subjectsresult)) {
-                echo "<a href=\"manage_content.php?subject={$subject["id"]}\"" ;
+                echo "<a href=\"index.php?subject={$subject["id"]}\"" ;
                 if ( $subject["id"] == $selected_subject_id ) {
                     // STYLE THE SUBJECT WITH THE "selected" CLASS IF IT IS CURRENTLY SELECTED
                     echo "<li class=\"selected\">" . $subject["menu_name"] . "</li>";
@@ -58,31 +58,34 @@ if (isset($_GET["subject"])) {
                     // NORMAL STYLING IF NOT SELECTED
                     echo "<li>" . $subject["menu_name"] . "</li>";
                 }
-                echo "</a>";
-                // GET RELATED PAGES FOR EACH SUBJECT
-                // SQL QUERY IS DEFINED IN THE get_pages_for_subject function
-                $pagesresult = get_related_pages_for_subject($subject["id"]);
-                // OUTPUT RELATED PAGES INTO UNORDERED LIST
-                while($page = mysqli_fetch_assoc($pagesresult)) {
-                    echo "<ul class=\"pages\">";
-                    echo "<a href=\"manage_content.php?page={$page["id"]}\"" ;
-                    if ( $page["id"] == $selected_page_id ) {
-                        // STYLE THE PAGE WITH THE "selected" CLASS IF IT IS CURRENTLY SELECTED
-                        echo "<li class=\"selected\">" . $page["menu_name"] . "</li>";
-                    } else {
-                        // NORMAL STYLING IF NOT SELECTED
-                        echo "<li>" . $page["menu_name"] . "</li>";
+                echo "</a>" . "</br>";
+                // OUTPUT RELATED PAGES FOR SELECTED SUBJECT
+                if ($current_subject["id"] == $subject["id"]) {
+                    $pagesresult = get_related_pages_for_subject($subject["id"]);
+                    // OUTPUT RELATED PAGES AS UNORDERED LIST
+                    while($page = mysqli_fetch_assoc($pagesresult)) {
+                        echo "<ul class=\"pages\">";
+                        echo "<a href=\"index.php?page={$page["id"]}\"" ;
+                        if ( $page["id"] == $selected_page_id ) {
+                            // STYLE THE PAGE WITH THE "selected" CLASS IF IT IS CURRENTLY SELECTED
+                            echo "<li class=\"selected\">" . $page["menu_name"] . "</li>";
+                        } else {
+                            // NORMAL STYLING IF NOT SELECTED
+                            echo "<li>" . $page["menu_name"] . "</li>";
+                        }
+                        echo "</a>";
+                        echo "</ul>";
                     }
-                    echo "</a>";
-                    echo "</ul>";
+                    // RELEASE PAGE DATA
+                    mysqli_free_result($pagesresult);
+                } else {
+                    // DO NOTHING
+
                 }
-                // RELEASE PAGE DATA
-                mysqli_free_result($pagesresult);
             }
             ?>
         </ul>
-        </br>
-        <a href="new_subject.php">+ Add a subject</a>
+
     </div>
 
 
@@ -95,50 +98,10 @@ if (isset($_GET["subject"])) {
         if ($current_subject) {
             // SUBJECT SELECTED
             // OUTPUT MENU NAME FOR THIS SUBJECT
-            echo "<h3>Manage Subject</h3>";
-            echo "</br>";
-
+            echo "</br></br>";
             echo "<h4 id=\"h4PageCount\">" . $current_subject["menu_name"] . "</h4>";
             echo "</br>";
-            // ADD EDIT LINK LINKING TO THE CURRENT SUBJECT
 
-            echo "<a href=\"edit_subject.php?subject={$current_subject["id"]}\">Edit Subject</a>";
-            echo "<hr>";
-
-
-
-
-            // GET RELATED PAGES FOR EACH SUBJECT
-            // SQL QUERY IS DEFINED IN THE get_pages_for_subject function
-            $pagesresult = get_related_pages_for_subject($current_subject["id"]);
-
-            // OUTPUT RELATED PAGES INTO UNORDERED LIST
-
-            $pagesReturned = mysqli_num_rows($pagesresult);
-
-            echo "<h4 id=\"h4PageCount\">";
-            echo "{$pagesReturned} Related Pages for this Subject." ;
-            echo "</h4>";
-            echo "</br>";
-
-
-
-            while($page = mysqli_fetch_assoc($pagesresult)) {
-                echo "<ul class=\"pages\">";
-                echo "<a href=\"manage_content.php?page={$page["id"]}\"" ;
-                echo "<li>" . $page["menu_name"] . "</li>";
-                echo "</a>";
-                echo "</ul>";
-
-
-            }
-
-
-
-
-            echo "</br></br>";
-            echo "<a href=\"new_page.php?subject={$current_subject["id"]}\">+ Add a Related Page</a>";
-            echo "<hr>";
 
 
 
@@ -152,22 +115,17 @@ if (isset($_GET["subject"])) {
         } elseif ($currentpage) {
             // PAGE SELECTED
             // OUTPUT MENU NAME FOR THIS PAGE
-            echo "<h3>Manage Page</h3>";
-            echo "</br>";
-            echo "<h4 id=\"h4PageCount\">" . $currentpage["menu_name"] . "</h4>";
+            echo "</br></br>";
+            echo "<h4 id=\"h4PageCount\">" . $currentpage["content"] . "</h4>";
             echo "</br>";
 
-            echo $currentpage["content"];
-            echo "</br></br>";
-            // ADD EDIT LINK LINKING TO THE CURRENT PAGE
-            echo "<a href=\"edit_page.php?page={$selected_page_id}\">Edit Page</a>";
-            echo "<hr>";
 
 
 
         } else {
-            echo "<h3>Manage Content</h3>";
-            echo "Please select a Subject or Page.";
+            echo "</br></br>";
+            echo "<h4 id=\"h4PageCount\">" . "Please select a Subject or Page." . "</h4>";
+            echo "</br>";
         }
 
         ?>
