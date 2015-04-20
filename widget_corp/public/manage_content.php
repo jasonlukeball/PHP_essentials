@@ -89,9 +89,12 @@ if (isset($_GET["subject"])) {
             // SUBJECT SELECTED
             // OUTPUT MENU NAME FOR THIS SUBJECT
             echo "<h3>Manage Subject</h3>";
-            echo "Menu Name: " . $current_subject["menu_name"];
+            echo "</br>";
+
+            echo "<h4 id=\"h4PageCount\">" . $current_subject["menu_name"] . "</h4>";
+            echo "</br>";
             // ADD EDIT LINK LINKING TO THE CURRENT SUBJECT
-            echo "</br></br>";
+
             echo "<a href=\"edit_subject.php?subject={$current_subject["id"]}\">Edit Subject</a>";
             echo "<hr>";
 
@@ -110,6 +113,7 @@ if (isset($_GET["subject"])) {
             echo "{$pagesReturned} Related Pages for this Subject." ;
             echo "</h4>";
             echo "</br>";
+
 
 
             while($page = mysqli_fetch_assoc($pagesresult)) {
@@ -142,7 +146,16 @@ if (isset($_GET["subject"])) {
             // PAGE SELECTED
             // OUTPUT MENU NAME FOR THIS PAGE
             echo "<h3>Manage Page</h3>";
-            echo "Menu Name: " . $currentpage["menu_name"];
+            echo "</br>";
+            echo "<h4 id=\"h4PageCount\">" . $currentpage["menu_name"] . "</h4>";
+            echo "</br>";
+
+            echo $currentpage["content"];
+            echo "</br></br>";
+            // ADD EDIT LINK LINKING TO THE CURRENT PAGE
+            echo "<a href=\"edit_page.php?page={$selected_page_id}\">Edit Page</a>";
+            echo "<hr>";
+
 
 
         } else {

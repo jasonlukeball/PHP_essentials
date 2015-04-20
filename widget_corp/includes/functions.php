@@ -94,6 +94,17 @@ function get_page_by_id ($page_id) {
 }
 
 
-
-
+// SQL QUERY TO GET ALL RELATED PAGES BY SUBJECT ID
+function get_all_pages_by_subject_id($subject_id) {
+    // GET THE CONNECTION VARIABLE AND MAKE IT GLOBAL
+    global $connection;
+    // GET ALL RELATED PAGES ORDERED BY POSITION
+    $pagesquery = "SELECT * FROM pages WHERE subject_id = {$subject_id} ORDER BY position ASC";
+    // STORE RESULT
+    $pagesresult = mysqli_query($connection, $pagesquery);
+    // CHECK FOR ERRORS
+    confirm_query($pagesresult);
+    // RETURN DATA FROM FUNCTION
+    return $pagesresult;
+}
 
