@@ -72,8 +72,6 @@ if (!empty($_POST["submit"])) {
 
 // INCLUDE HEADER HTML
 include "../includes/layouts/header.php";
-
-
 ?>
 
 
@@ -200,6 +198,7 @@ include "../includes/layouts/header.php";
         <!-- CANCEL BUTTON -->
         <a href="manage_content.php">Cancel</a>
         &nbsp;
+        <!-- DELETE BUTTON -->
         <a
             href="delete_subject.php?subject=<?php echo $current_subject["id"] ?>"
             style="color:red;"

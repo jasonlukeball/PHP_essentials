@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dac137e8-fe02-4edb-a1de-66a043d9e9f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/edit_page.php" afterPath="$PROJECT_DIR$/widget_corp/public/edit_page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/edit_subject.php" afterPath="$PROJECT_DIR$/widget_corp/public/edit_subject.php" />
     </list>
     <ignored path="lynda_essentialTraining.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,10 +94,15 @@
       <file leaf-file-name="edit_subject.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_subject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.25" vertical-offset="450" max-vertical-offset="3585">
-              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+            <state vertical-scroll-proportion="-19.625" vertical-offset="594" max-vertical-offset="1635">
+              <caret line="200" column="19" selection-start-line="200" selection-start-column="19" selection-end-line="200" selection-end-column="19" />
               <folding>
-                <marker date="1429315265000" expanded="true" signature="1140:1244" placeholder="UPDATE subje..." />
+                <element signature="e#746#1838#0#PHP" expanded="false" />
+                <element signature="e#1393#1777#0#PHP" expanded="false" />
+                <element signature="e#1781#1838#0#PHP" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#form#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+                <marker date="1429514591000" expanded="true" signature="1140:1244" placeholder="UPDATE subje..." />
               </folding>
             </state>
           </provider>
@@ -105,11 +111,11 @@
       <file leaf-file-name="edit_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.411985" vertical-offset="0" max-vertical-offset="3150">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="2.7902622" vertical-offset="0" max-vertical-offset="2580">
+              <caret line="188" column="19" selection-start-line="188" selection-start-column="19" selection-end-line="188" selection-end-column="19" />
               <folding>
-                <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1429514236000" expanded="true" signature="1180:1305" placeholder="UPDATE subje..." />
+                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+                <marker date="1429514591000" expanded="true" signature="1180:1305" placeholder="UPDATE pages..." />
               </folding>
             </state>
           </provider>
@@ -200,13 +206,13 @@
         <option value="$PROJECT_DIR$/widget_corp/public/create_subject.php" />
         <option value="$PROJECT_DIR$/widget_corp/includes/layouts/header.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/delete_subject.php" />
-        <option value="$PROJECT_DIR$/widget_corp/public/edit_subject.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/widget_corp/public/new_page.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/create_page.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/delete_page.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/manage_content.php" />
         <option value="$PROJECT_DIR$/widget_corp/includes/functions.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/edit_subject.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/edit_page.php" />
       </list>
     </option>
@@ -445,7 +451,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23888889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23888889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -905,21 +911,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_subject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.25" vertical-offset="450" max-vertical-offset="3585">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        <state vertical-scroll-proportion="-19.625" vertical-offset="594" max-vertical-offset="1635">
+          <caret line="200" column="19" selection-start-line="200" selection-start-column="19" selection-end-line="200" selection-end-column="19" />
           <folding>
-            <marker date="1429315265000" expanded="true" signature="1140:1244" placeholder="UPDATE subje..." />
+            <element signature="e#746#1838#0#PHP" expanded="false" />
+            <element signature="e#1393#1777#0#PHP" expanded="false" />
+            <element signature="e#1781#1838#0#PHP" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#form#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <marker date="1429514591000" expanded="true" signature="1140:1244" placeholder="UPDATE subje..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.411985" vertical-offset="0" max-vertical-offset="3150">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="2.7902622" vertical-offset="0" max-vertical-offset="2580">
+          <caret line="188" column="19" selection-start-line="188" selection-start-column="19" selection-end-line="188" selection-end-column="19" />
           <folding>
-            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1429514236000" expanded="true" signature="1180:1305" placeholder="UPDATE subje..." />
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <marker date="1429514591000" expanded="true" signature="1180:1305" placeholder="UPDATE pages..." />
           </folding>
         </state>
       </provider>

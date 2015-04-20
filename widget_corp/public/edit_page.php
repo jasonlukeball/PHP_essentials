@@ -186,6 +186,7 @@ include "../includes/layouts/header.php";
         <!-- CANCEL BUTTON -->
         <a href="manage_content.php">Cancel</a>
         &nbsp;
+        <!-- DELETE BUTTON -->
         <a
             href="delete_page.php?page=<?php echo $current_page["id"] ?>"
             style="color:red;"
