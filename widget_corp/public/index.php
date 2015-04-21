@@ -14,7 +14,7 @@ if (isset($_GET["subject"])) {
     $default_page_id = $default_page_for_subject["id"];
     // REDIRECT TO THAT PAGE
     redirect_to("index.php?page={$default_page_id}");
-    
+
 
 } elseif (isset($_GET["page"])) {
     // IF WE'VE PASSED A PAGE ID, GET IT
@@ -126,8 +126,15 @@ include "../includes/layouts/header.php";
 
         } elseif ($current_page) {
             // PAGE SELECTED
-            // OUTPUT DATA FOR THIS PAGE
-            echo "</br></br>";
+            // OUTPUT RELATED SUBJECT NAME
+            $related_subject = get_subject_by_id($current_page["subject_id"]);
+            // OUTPUT PAGE CONTENT
+            echo "<h3>" . $related_subject["menu_name"] . "</h3>";
+
+
+
+
+
             echo "<h4 id=\"h4PageCount\">" . $current_page["content"] . "</h4>";
             echo "</br>";
 
