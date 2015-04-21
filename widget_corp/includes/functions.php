@@ -132,3 +132,15 @@ function get_all_pages_by_subject_id($subject_id) {
     return $pagesresult;
 }
 
+
+// SQL QUERY TO FIND DEFAULT PAGE FOR SUBJECT
+function get_default_page_for_subject ( $subject_id ) {
+    $page_set = get_related_pages_for_subject( $subject_id, "public" );
+    if ( $page = mysqli_fetch_assoc( $page_set ) ) {
+        // THERE WAS A SET OF RELATED PAGES RETURNED FOR THE SPECIFIED SUBJECT
+        return $page;
+    } else {
+        return null;
+    }
+}
+

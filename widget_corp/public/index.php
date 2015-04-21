@@ -1,7 +1,3 @@
-<!---------------->
-<!---- SETUP ----->
-<!---------------->
-
 <?php
 
 // INCLUDE DATABASE CONNECTION PHP
@@ -9,19 +5,16 @@ require_once "../includes/db_connection.php";
 // INCLUDE FUNCTIONS PHP
 require_once "../includes/functions.php";
 
-// SET THE LAYOUT CONTEXT FOR THE HEADER
-$layout_context = "public";
-// INCLUDE HEADER HTML
-include "../includes/layouts/header.php";
-
 
 if (isset($_GET["subject"])) {
-    // IF WE'VE PASSED A SUBJECT ID, GET IT
-    $selected_subject_id = $_GET["subject"];
-    // GET DATA FOR THIS SUBJECT FROM THE get_subject_by_id FUNCTION (SQL)
-    $current_subject = get_subject_by_id($selected_subject_id);
-    // SET PAGE ID TO NULL
-    $selected_page_id = null;
+    // IF WE'VE PASSED A SUBJECT ID, GET THE DEFAULT PAGE TO LOAD
+    // DEFAULT PAGE ARRAY
+    $default_page_for_subject = get_default_page_for_subject ( $_GET["subject"] );
+    // DEFAULT PAGE ID
+    $default_page_id = $default_page_for_subject["id"];
+    // REDIRECT TO THAT PAGE
+    redirect_to("index.php?page={$default_page_id}");
+    
 
 } elseif (isset($_GET["page"])) {
     // IF WE'VE PASSED A PAGE ID, GET IT
@@ -40,6 +33,16 @@ if (isset($_GET["subject"])) {
 ?>
 
 
+<?php
+// SET THE LAYOUT CONTEXT FOR THE HEADER
+$layout_context = "public";
+// INCLUDE HEADER HTML
+include "../includes/layouts/header.php";
+?>
+
+
+
+
 <div id="main">
 
 
@@ -54,6 +57,10 @@ if (isset($_GET["subject"])) {
 
             // OUTPUT SUBJECTS INTO UNORDERED LIST WITH LINKS
             while($subject = mysqli_fetch_assoc($subjectsresult)) {
+
+
+
+
                 echo "<a href=\"index.php?subject={$subject["id"]}\"" ;
                 if ( $subject["id"] == $selected_subject_id ) {
                     // STYLE THE SUBJECT WITH THE "selected" CLASS IF IT IS CURRENTLY SELECTED
@@ -63,6 +70,11 @@ if (isset($_GET["subject"])) {
                     echo "<li>" . $subject["menu_name"] . "</li>";
                 }
                 echo "</a>" . "</br>";
+
+
+
+
+
                 // OUTPUT RELATED PAGES FOR CURRENT SUBJECT
                 // IF SUBJECT IS SELECTED OR IF A PAGE IS SELECTED (SHOW RELATED SUBJECT'S PAGES)
                 if (
