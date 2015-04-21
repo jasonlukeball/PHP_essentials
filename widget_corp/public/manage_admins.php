@@ -52,7 +52,7 @@ include "../includes/layouts/header.php";
         </table>
 
         </br>
-        <a href="create_admin.php">+ Create New Admin User</a>
+        <a href="new_admin.php">+ Create New Admin User</a>
         </hr>
 
     </div>
