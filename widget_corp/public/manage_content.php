@@ -160,7 +160,7 @@ if (isset($_GET["subject"])) {
             echo "<h4 id=\"h4PageCount\">" . $currentpage["menu_name"] . "</h4>";
             echo "</br>";
 
-            echo $currentpage["content"];
+            echo nl2br($currentpage["content"]);
             echo "</br></br>";
             // ADD EDIT LINK LINKING TO THE CURRENT PAGE
             echo "<a href=\"edit_page.php?page={$selected_page_id}\">Edit Page</a>";

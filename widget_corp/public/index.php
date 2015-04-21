@@ -23,6 +23,14 @@ if (isset($_GET["subject"])) {
     $current_page = get_page_by_id ($selected_page_id);
     // SET SUBJECT ID TO NULL
     $selected_subject_id = null;
+
+    if ($current_page["visible"] == 0 ) {
+        redirect_to("index.php");
+    }
+
+
+
+
 } else {
     // A SUBJECT OR PAGE $_GET HAS NOT BEEN PASSED
     $selected_subject_id = null;
@@ -126,23 +134,17 @@ include "../includes/layouts/header.php";
 
         } elseif ($current_page) {
             // PAGE SELECTED
-            // OUTPUT RELATED SUBJECT NAME
-            $related_subject = get_subject_by_id($current_page["subject_id"]);
+
             // OUTPUT PAGE CONTENT
-            echo "<h3>" . $related_subject["menu_name"] . "</h3>";
-
-
-
-
-
-            echo "<h4 id=\"h4PageCount\">" . $current_page["content"] . "</h4>";
+            echo "<h3>" . $current_page["menu_name"] . "</h3>";
+            echo "<h4 id=\"h4PageCount\">" . nl2br($current_page["content"]) . "</h4>";
             echo "</br>";
 
 
 
         } else {
             echo "</br></br>";
-            echo "<h4 id=\"h4PageCount\">" . "Please select a Subject or Page." . "</h4>";
+            echo "<h4 id=\"h4PageCount\">" . "Welcome!" . "</h4>";
             echo "</br>";
         }
 

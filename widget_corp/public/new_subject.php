@@ -25,6 +25,8 @@ if (isset($_GET["subject"])) {
     $selected_page_id = $_GET["page"];
     // GET DATA FOR THIS PAGE FROM THE get_page_by_id FUNCTION
     $currentpage = get_page_by_id ($selected_page_id);
+
+
     // SET SUBJECT ID TO NULL
     $selected_subject_id = null;
 } else {
