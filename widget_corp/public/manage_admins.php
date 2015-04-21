@@ -60,20 +60,6 @@ include "../includes/layouts/header.php";
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<?php
+include "../includes/layouts/footer.php";
+?>

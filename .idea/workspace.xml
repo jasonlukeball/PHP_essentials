@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dac137e8-fe02-4edb-a1de-66a043d9e9f1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/admin.php" afterPath="$PROJECT_DIR$/widget_corp/public/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/includes/functions.php" afterPath="$PROJECT_DIR$/widget_corp/includes/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jason_ball.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jason_ball.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/public/manage_admins.php" afterPath="$PROJECT_DIR$/widget_corp/public/manage_admins.php" />
     </list>
     <ignored path="lynda_essentialTraining.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,11 +91,11 @@
       <file leaf-file-name="manage_admins.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/widget_corp/public/manage_admins.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17602997" vertical-offset="204" max-vertical-offset="1275">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.9625468" vertical-offset="189" max-vertical-offset="1050">
+              <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
               <folding>
-                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1429587862000" expanded="true" signature="1031:1164" placeholder="..." />
+                <element signature="e#461#479#0#HTML" expanded="true" />
+                <marker date="1429588018000" expanded="true" signature="1031:1164" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -949,11 +946,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/manage_admins.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17602997" vertical-offset="204" max-vertical-offset="1275">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.9625468" vertical-offset="189" max-vertical-offset="1050">
+          <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1429587862000" expanded="true" signature="1031:1164" placeholder="..." />
+            <element signature="e#461#479#0#HTML" expanded="true" />
+            <marker date="1429588018000" expanded="true" signature="1031:1164" placeholder="..." />
           </folding>
         </state>
       </provider>
