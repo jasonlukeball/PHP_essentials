@@ -13,12 +13,6 @@ if (isset($_GET["admin"])) {
     // GET DATA FOR THIS PAGE FROM THE get_subject_by_id FUNCTION
     $current_admin = get_admin_by_id($selected_admin_id);
 
-
-
-
-
-
-
 } else {
     // NO ADMIN PASSED
     redirect_to("manage_admins.php");
@@ -30,7 +24,6 @@ if (isset($_GET["admin"])) {
 // <!--------------------->
 
 
-
 if (!empty($_POST["submit"])) {
 
     // FORM WAS SUBMITTED
@@ -39,7 +32,7 @@ if (!empty($_POST["submit"])) {
     // GET VALUES FROM THE $_POST
     $id         = $selected_admin_id;
     $username   = mysqli_real_escape_string($connection, $_POST["username"]);
-    $password   = mysqli_real_escape_string($connection, $_POST["password"]);
+    $password   = password_encrypt($_POST["password"]);
 
 
     // BEGIN UPDATE
@@ -87,14 +80,14 @@ include "../includes/layouts/header.php";
 
 
     <div id="page">
-        <h3>Create Admin</h3>
+        <h3>Edit Admin</h3>
         </br>
 
         <form action="edit_admin.php?admin=<?php echo $current_admin["id"] ?>" method="post">
             <!-- USERNAME TEXT FIELD -->
             <p>Username: <input type="text" name="username" value="<?php echo $current_admin["username"] ?>" /></p>
             <!-- USERNAME TEXT FIELD -->
-            <p>Password: <input type="text" name="password" value="<?php echo $current_admin["hashed_password"] ?>" /></p>
+            <p>Password: <input type="password" name="password" value="<?php echo $current_admin["hashed_password"] ?>" /></p>
             </br>
             <!-- SUBMIT BUTTON -->
             <input class="button" name="submit" type="submit" value="Save Changes" />
@@ -113,21 +106,6 @@ include "../includes/layouts/header.php";
             >Delete</a>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!---------------->

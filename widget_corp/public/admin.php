@@ -1,5 +1,6 @@
 <?php
     require_once "../includes/functions.php";
+    $layout_context = "admin";
     include "../includes/layouts/header.php";
 ?>
 

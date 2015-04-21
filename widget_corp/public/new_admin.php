@@ -30,7 +30,7 @@ include "../includes/layouts/header.php";
             <!-- USERNAME TEXT FIELD -->
             <p>Username: <input type="text" name="username" value="" /></p>
             <!-- USERNAME TEXT FIELD -->
-            <p>Password: <input type="text" name="password" value="" /></p>
+            <p>Password: <input type="password" name="password" value="" /></p>
             </br>
             <!-- SUBMIT BUTTON -->
             <input class="button" name="submit" type="submit" value="Create Admin" />
