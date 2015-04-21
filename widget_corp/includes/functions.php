@@ -7,13 +7,13 @@ function redirect_to($new_location) {
     exit;
 }
 
-
 // ERROR CHECK QUERY
 function confirm_query($result_set) {
     If (!$result_set) {
         die ("Query failed");
     }
 }
+
 
 // ------------------ //
 // ---- SUBJECTS ---- //
@@ -44,7 +44,6 @@ function get_all_subjects($access) {
     return $subjectsresult;
 }
 
-
 // SQL QUERY TO GET PAGES RELATED TO SUBJECT
 function get_related_pages_for_subject ($subject_id, $access) {
     // GET THE CONNECTION VARIABLE AND MAKE IT GLOBAL
@@ -71,7 +70,6 @@ function get_related_pages_for_subject ($subject_id, $access) {
     return $pagesresult;
 }
 
-
 // SQL QUERY TO GET SUBJECT BY ID
 function get_subject_by_id($subject_id) {
     // GET THE CONNECTION VARIABLE AND MAKE IT GLOBAL
@@ -93,6 +91,7 @@ function get_subject_by_id($subject_id) {
         return null;
     }
 }
+
 
 // ------------------ //
 // ----- PAGES ------ //
@@ -123,7 +122,6 @@ function get_page_by_id ($page_id) {
 
 }
 
-
 // SQL QUERY TO GET ALL RELATED PAGES BY SUBJECT ID
 function get_all_pages_by_subject_id($subject_id) {
     // GET THE CONNECTION VARIABLE AND MAKE IT GLOBAL
@@ -137,7 +135,6 @@ function get_all_pages_by_subject_id($subject_id) {
     // RETURN DATA FROM FUNCTION
     return $pagesresult;
 }
-
 
 // SQL QUERY TO FIND DEFAULT PAGE FOR SUBJECT
 function get_default_page_for_subject ( $subject_id ) {
@@ -171,7 +168,6 @@ function get_all_admins() {
     return $adminsresult;
 
 }
-
 
 // SQL QUERY TO GET A ADMIN BY ID
 function get_admin_by_id ($admin_id) {
