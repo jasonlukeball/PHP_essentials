@@ -171,3 +171,29 @@ function get_all_admins() {
     return $adminsresult;
 
 }
+
+
+// SQL QUERY TO GET A ADMIN BY ID
+function get_admin_by_id ($admin_id) {
+    // SQL QUERY TO GET PAGE BY ID
+
+    // GET THE CONNECTION VARIABLE AND MAKE IT GLOBAL
+    global $connection;
+    // ESCAPE CHARACTERS TO AVOID SQL INJECTION (HACKING)
+    $safe_admin_id = mysqli_real_escape_string($connection, $admin_id);
+    // GET ADMIN BY ID
+    $adminquery = "SELECT * FROM admins WHERE id = {$safe_admin_id} LIMIT 1";
+    // STORE RESULT
+    $adminresult = mysqli_query($connection, $adminquery);
+    // CHECK FOR ERRORS
+    confirm_query($adminquery);
+    // GET THE RETURNED ADMIN RECORD AS AN ASSOCIATED ARRAY
+    if ($admin = mysqli_fetch_assoc($adminresult)) {
+        // RETURN DATA FROM FUNCTION
+        return $admin;
+    } else {
+        // RETURN NULL FROM FUNCTION
+        return null;
+    }
+
+}
