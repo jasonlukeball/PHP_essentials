@@ -14,14 +14,14 @@ if (!empty($_POST["submit"])) {
 
     // GET VALUES FROM THE $_POST
     $username = mysqli_real_escape_string($connection, $_POST["username"]);
-    $password = password_encrypt($_POST["password"]);
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 
 
 
     // BEGIN DATABASE QUERY
     // DEFINE QUERY
-    $query = "INSERT INTO admins (username, hashed_password) VALUES ('{$username}', '{$password_hashed}')";
+    $query = "INSERT INTO admins (username, hashed_password) VALUES ('{$username}', '{$password}')";
 
     // PASS THE QUERY TO MYSQL AND GET THE RESULT BACK
     $result = mysqli_query($connection, $query);

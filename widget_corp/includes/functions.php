@@ -198,39 +198,3 @@ function get_admin_by_id ($admin_id) {
     }
 
 }
-
-
-
-// ------------------ //
-// --- ENCRYPTION --- //
-// ------------------ //
-
-// ADMIN PASSWORD ENCRYPTION
-function password_encrypt($password) {
-
-    $hash_format = "$2y$10$";                   // Tells PHP to use Blowfish Encryption with a "cost" of 10
-    $salt_length = 22;                          // Blowfish salts should be 22 characters or more
-    $salt = generate_salt ( $salt_length );
-    $format_and_salt = $hash_format . $salt;
-    $hash = crypt($password,$format_and_salt);
-    return $hash;
-
-}
-
-// ADMIN PASSWORD SALT
-function generate_salt($length) {
-    // Not 100% Unique but is 100% random
-    // MD5 returns 32 characters
-    $unique_rantom_string = md5(uniqid(mt_rand(), true));
-
-    // Valid characters for a salt are [a-aA-Z0-9./]
-    $base64_string = base64_encode($unique_rantom_string);
-
-    // But not '+' which is valid in base64 encoding
-    $modified_base64_string = str_replace('+', '.', $base64_string);
-
-    // Truncate string to the correct length
-    $salt = substr($modified_base64_string, 0, $length);
-
-    return $salt;
-}

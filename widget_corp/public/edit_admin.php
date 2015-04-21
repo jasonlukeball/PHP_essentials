@@ -32,7 +32,7 @@ if (!empty($_POST["submit"])) {
     // GET VALUES FROM THE $_POST
     $id         = $selected_admin_id;
     $username   = mysqli_real_escape_string($connection, $_POST["username"]);
-    $password   = password_encrypt($_POST["password"]);
+    $password   = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 
     // BEGIN UPDATE
