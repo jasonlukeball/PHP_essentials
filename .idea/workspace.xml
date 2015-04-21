@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/04_loops/for.php" line="2" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dac137e8-fe02-4edb-a1de-66a043d9e9f1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widget_corp/includes/functions.php" afterPath="$PROJECT_DIR$/widget_corp/includes/functions.php" />
-    </list>
+    <list default="true" id="dac137e8-fe02-4edb-a1de-66a043d9e9f1" name="Default" comment="" />
     <ignored path="lynda_essentialTraining.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -133,50 +131,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widget_corp/public/new_admin.php">
+      <file leaf-file-name="delete_admin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/widget_corp/public/delete_admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.875" vertical-offset="24" max-vertical-offset="825">
-              <caret line="43" column="6" selection-start-line="17" selection-start-column="0" selection-end-line="43" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widget_corp/public/create_admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="915">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.8426966" vertical-offset="0" max-vertical-offset="1170">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
-                <marker date="1429589971000" expanded="true" signature="493:576" placeholder="INSERT INTO ..." />
-                <marker date="1429589971000" expanded="true" signature="493:577" placeholder="INSERT INTO ..." />
+                <marker date="1429592281000" expanded="true" signature="539:569" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_admin.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_admin.php">
+      <file leaf-file-name="delete_page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widget_corp/public/delete_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4681648" vertical-offset="465" max-vertical-offset="2175">
-              <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+            <state vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="1170">
+              <caret line="41" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1429591686000" expanded="true" signature="1013:1100" placeholder="UPDATE admin..." />
-                <marker date="1429591686000" expanded="true" signature="1013:1101" placeholder="UPDATE admin..." />
-                <marker date="1429591686000" expanded="true" signature="1013:1107" placeholder="UPDATE admin..." />
+                <marker date="1429508162000" expanded="true" signature="532:561" placeholder="DELETE FROM ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.875" vertical-offset="0" max-vertical-offset="3195">
-              <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -189,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/08_forms/singlePageForm.php" />
         <option value="$PROJECT_DIR$/08_forms/validation.php" />
         <option value="$PROJECT_DIR$/08_forms/validationErrors.php" />
         <option value="$PROJECT_DIR$/08_forms/validationFunctions.php" />
@@ -240,6 +213,7 @@
         <option value="$PROJECT_DIR$/widget_corp/public/create_admin.php" />
         <option value="$PROJECT_DIR$/widget_corp/includes/functions.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/edit_admin.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/delete_admin.php" />
       </list>
     </option>
   </component>
@@ -525,13 +499,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/08_forms/forms.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/08_forms/redirectFunction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
@@ -806,16 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/delete_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37453184" vertical-offset="0" max-vertical-offset="1170">
-          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-          <folding>
-            <marker date="1429508162000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/delete_subject.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.78651685" vertical-offset="0" max-vertical-offset="1170">
@@ -926,20 +883,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-31.875" vertical-offset="0" max-vertical-offset="3195">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.11235955" vertical-offset="930" max-vertical-offset="2175">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1429591686000" expanded="true" signature="-1:-1" placeholder="UPDATE admin..." />
+            <marker date="1429591686000" expanded="true" signature="-1:-1" placeholder="UPDATE admin..." />
+            <marker date="1429591686000" expanded="true" signature="-1:-1" placeholder="UPDATE admin..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/create_admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="915">
+        <state vertical-scroll-proportion="0.09363296" vertical-offset="0" max-vertical-offset="915">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding>
-            <marker date="1429589971000" expanded="true" signature="493:576" placeholder="INSERT INTO ..." />
-            <marker date="1429589971000" expanded="true" signature="493:577" placeholder="INSERT INTO ..." />
+            <marker date="1429589971000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1429589971000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/new_admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.875" vertical-offset="24" max-vertical-offset="825">
+        <state vertical-scroll-proportion="0.7752809" vertical-offset="24" max-vertical-offset="825">
           <caret line="43" column="6" selection-start-line="17" selection-start-column="0" selection-end-line="43" selection-end-column="6" />
           <folding />
         </state>
@@ -975,23 +953,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_page.php">
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/delete_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.875" vertical-offset="0" max-vertical-offset="3195">
-          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
-          <folding />
+        <state vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="41" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <marker date="1429508162000" expanded="true" signature="532:561" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/edit_admin.php">
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/delete_admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4681648" vertical-offset="465" max-vertical-offset="2175">
-          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.8426966" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1429591686000" expanded="true" signature="1013:1100" placeholder="UPDATE admin..." />
-            <marker date="1429591686000" expanded="true" signature="1013:1101" placeholder="UPDATE admin..." />
-            <marker date="1429591686000" expanded="true" signature="1013:1107" placeholder="UPDATE admin..." />
+            <marker date="1429592281000" expanded="true" signature="539:569" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
