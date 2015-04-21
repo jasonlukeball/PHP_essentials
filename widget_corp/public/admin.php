@@ -1,23 +1,20 @@
-<!-- INCLUDE FUNCTIONS PHP -->
-<?php require_once "../includes/functions.php"; ?>
-<!-- INCLUDE HEADER HTML -->
-<?php include "../includes/layouts/header.php"; ?>
+<?php
+    require_once "../includes/functions.php";
+    include "../includes/layouts/header.php";
+?>
 
 
 
-
+<!---------------->
+<!-- NAVIGATION -->
+<!---------------->
 <div id="main">
-
     <div id="navigation">
-        &nbsp;
-        <p>Link 1</p>
-        <p>Link 2</p>
-        <p>Link 3</p>
-        <p>Link 4</p>
-        <p>Link 5</p>
     </div>
 
-
+    <!------------------>
+    <!-- PAGE CONTENT -->
+    <!------------------>
     <div id="page">
         <h3>Admin Menu</h3>
         <p>Welcome to the admin area.</p>
@@ -32,7 +29,6 @@
 </div>
 
 
-
-
-<!-- INCLUDE FOOTER HTML -->
-<?php include "../includes/layouts/footer.php"; ?>
+<?php
+    include "../includes/layouts/footer.php";
+?>

@@ -15,6 +15,9 @@ function confirm_query($result_set) {
     }
 }
 
+// ------------------ //
+// ---- SUBJECTS ---- //
+// ------------------ //
 
 // SQL QUERY TO GET ALL SUBJECTS
 function get_all_subjects($access) {
@@ -91,6 +94,9 @@ function get_subject_by_id($subject_id) {
     }
 }
 
+// ------------------ //
+// ----- PAGES ------ //
+// ------------------ //
 
 // SQL QUERY TO GET A PAGE BY ID
 function get_page_by_id ($page_id) {
@@ -144,3 +150,24 @@ function get_default_page_for_subject ( $subject_id ) {
     }
 }
 
+
+// ------------------ //
+// ----- ADMINS ----- //
+// ------------------ //
+
+
+// SQL QUERY TO GET ALL ADMINS
+function get_all_admins() {
+
+    // GET THE CONNECTION VARIABLE AND MAKE IT GLOBAL
+    global $connection;
+    // GET ALL SUBJECTS ORDERED BY POSITION
+    $adminsquery = "SELECT * FROM admins ORDER BY username ASC";
+    // STORE RESULT
+    $adminsresult = mysqli_query($connection, $adminsquery);
+    // CHECK FOR ERRORS
+    confirm_query($adminsresult);
+    // RETURN DATA FROM FUNCTION
+    return $adminsresult;
+
+}
