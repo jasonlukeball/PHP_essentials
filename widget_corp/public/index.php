@@ -114,6 +114,8 @@ include "../includes/layouts/header.php";
             ?>
         </ul>
 
+        <a href="login.php">Admin Login</a>
+
     </div>
 
 

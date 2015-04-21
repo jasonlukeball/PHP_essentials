@@ -198,3 +198,66 @@ function get_admin_by_id ($admin_id) {
     }
 
 }
+
+
+// SQL QUERY TO GET A ADMIN BY USERNAME
+function get_admin_by_username ($username) {
+    // SQL QUERY TO GET PAGE BY ID
+
+    // GET THE CONNECTION VARIABLE AND MAKE IT GLOBAL
+    global $connection;
+    // ESCAPE CHARACTERS TO AVOID SQL INJECTION (HACKING)
+    $safe_admin_username = mysqli_real_escape_string($connection, $username);
+    // GET ADMIN BY USERNAME
+    $adminquery = "SELECT * FROM admins WHERE username = '{$safe_admin_username}' LIMIT 1";
+    // STORE RESULT
+    $adminresult = mysqli_query($connection, $adminquery);
+    // CHECK FOR ERRORS
+    confirm_query($adminquery);
+    // GET THE RETURNED ADMIN RECORD AS AN ASSOCIATED ARRAY
+    if ($admin = mysqli_fetch_assoc($adminresult)) {
+        // RETURN DATA FROM FUNCTION
+        return $admin;
+    } else {
+        // RETURN NULL FROM FUNCTION
+        return null;
+    }
+
+}
+
+
+
+
+function attempt_login($username, $password) {
+
+    // SEARCH DATABASE FOR MATCHING USER
+    $admin = get_admin_by_username($username);
+
+    // IF MATCHING USER
+    if ( $admin ) {
+        // CHECK PASSWORD ENTERED
+        if ( password_verify($password, $admin["hashed_password"])) {
+            // PASSWORD MATCH
+            // AUTHENTICATION SUCCESSFUL
+            // RETURN THE ADMIN RECORD IN AN ARRAY
+            return $admin;
+        } else {
+            // PASSWORD DOES NOT MATCH
+            // AUTHENTICATION FAIL
+            return false;
+        }
+    } else {
+        // NO MATCHING USER
+        return false;
+
+    }
+
+
+
+
+
+
+
+
+
+}

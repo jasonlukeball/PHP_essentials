@@ -17,8 +17,11 @@
     <!-- PAGE CONTENT -->
     <!------------------>
     <div id="page">
+
+        <?php echo $_SESSION["username"] ?>
+
         <h3>Admin Menu</h3>
-        <p>Welcome to the admin area.</p>
+        <p>Hi, Welcome to the admin area!</p>
         <ul>
             <li><a href="manage_content.php">Manage Website Content</a></li>
             <li><a href="manage_admins.php">Manage Admin Users</a></li>
